@@ -1,0 +1,552 @@
+/* ------------- ESTILOS ------------- */
+
+/* VERDE: #98c060 */
+/* LILA: #dfb6fb */
+/* CELESTE: #46acdc */
+:root {
+    --verde: #98c060;
+    --lila: #dfb6fb;
+    --celeste: #46acdc;
+    --fallido: rgb(232, 124, 124);
+    --exitoso: rgb(141, 219, 141);
+}
+
+/* FONT: 'Fredoka One', cursive */
+
+/* ------------- ESTILOS ------------- */
+
+
+
+/* NAV */
+.caja-nav {
+    border-bottom: #98c060 5px solid;
+}
+
+.div-logo {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.barra-nav {
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.lista-nav {
+    list-style: none;
+}
+
+.lista-nav li a {
+    text-decoration: none;
+}
+
+.elemento-nav a,
+.elemento-nav button {
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+}
+
+.elemento-nav a:hover,
+.elemento-nav button:hover {
+    transition: ease-in-out .2;
+    text-decoration: underline;
+    color: #46acdc;
+}
+
+.elemento-nav a:focus,
+.elemento-nav button:focus {
+    transition: ease-in-out .2;
+    text-decoration: underline;
+    color: #46acdc;
+}
+
+
+.logo {
+    max-height: 7em;
+    width: auto;
+}
+
+/* NAV */
+
+/* MAIN */
+main {
+    background-image: linear-gradient(to bottom, #ffffff, #dfb6fb);
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* OFERTAS */
+.card-sombra {
+    box-shadow: 1px 1px 10px rgb(160, 160, 160);
+    padding: 0;
+}
+
+.boton-comprar {
+    background-color: #46acdc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.boton-comprar:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.boton-comprar:focus {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.boton-sin-stock {
+    background-color: #686868;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.card-descuento {
+    background-color: #98c060;
+    color: white;
+    padding: .3em;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* OFERTAS */
+
+/* NUESTROS JUEGOS */
+.boton-ver-mas {
+    background-color: #98c060;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    box-shadow: 2px 2px 5px rgba(53, 53, 53, 0.438);
+    padding: .3em 1em;
+    margin-top: 1em;
+}
+
+.boton-ver-mas:hover {
+    transition: ease-in-out .2s;
+    background-color: #7ea34a;
+}
+
+.boton-ver-mas:focus {
+    transition: ease-in-out .2s;
+    background-color: #7ea34a;
+}
+
+/* NUESTROS JUEGOS */
+
+/* CONTACTO */
+.boton-enviar {
+    background-color: #46acdc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .2em 1em;
+    font-size: 1.2em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}
+
+.boton-enviar:hover {
+    transition: ease-in-out .2s;
+    background-color: #98c060;
+}
+
+.boton-enviar:focus {
+    transition: ease-in-out .2s;
+    background-color: #98c060;
+}
+
+/* CONTACTO */
+/* MAIN */
+
+/* FOOTER */
+footer {
+    background-color: #dfb6fb;
+    color: black;
+}
+
+.separador-footer {
+    border: none;
+    height: 4px;
+    background-color: black;
+}
+
+footer li {
+    list-style: none;
+}
+
+/* FOOTER */
+
+/* PERFIL */
+.boton-cerrar-sesion {
+    background-color: rgb(187, 60, 60);
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    padding: .7em 1em;
+}
+
+.boton-cerrar-sesion:hover {
+    transition: ease-in-out .2s;
+    background-color: rgb(146, 34, 34);
+}
+
+.boton-cerrar-sesion:focus {
+    transition: ease-in-out .2s;
+    background-color: rgb(146, 34, 34);
+}
+
+/* PERFIL */
+
+/* NOSOTROS */
+.img-nosotros {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
+}
+
+/* NOSOTROS */
+
+/* LUDOTECA */
+.card-titulo-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-titulo-link:hover {
+    text-decoration: underline;
+}
+
+.card-titulo-link:focus {
+    text-decoration: underline;
+}
+
+/* LUDOTECA */
+
+/* DETALLE JUEGO */
+.stock-detalle {
+    font-size: 1.2em;
+    color: white;
+    background-color: #98c060;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
+}
+
+.precio-detalle {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.boton-comprar-detalle {
+    width: 100%;
+    background-color: #46acdc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.boton-comprar-detalle:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.boton-comprar-detalle:focus {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.categoria-detalle {
+    list-style: none;
+    background-color: #98c060;
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
+}
+
+/* DETALLE JUEGO */
+
+/* CARRITO */
+.elemento-carrito {
+    list-style: none;
+}
+
+.boton-eliminar {
+    background-color: rgb(187, 60, 60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.boton-eliminar:hover {
+    transition: ease-in-out .2s;
+    background-color: rgb(146, 34, 34);
+}
+
+.boton-eliminar:focus {
+    transition: ease-in-out .2s;
+    background-color: rgb(146, 34, 34);
+}
+
+.total-carrito {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.caja-contador-carrito {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.boton-cantidad-carrito {
+    background-color: rgba(178, 34, 34, 0);
+    border: none;
+}
+
+.boton-vaciar-carrito {
+    background-color: #46addc00;
+    border: 4px solid rgb(187, 60, 60);
+    color: rgb(146, 34, 34);
+}
+
+.boton-vaciar-carrito:hover {
+    transition: ease-in-out .15s;
+    background-color: rgb(187, 60, 60);
+    color: white;
+}
+
+.boton-vaciar-carrito:focus {
+    transition: ease-in-out .15s;
+    background-color: rgb(187, 60, 60);
+    color: white;
+}
+
+.boton-comprar-carrito {
+    background-color: #46acdc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.boton-comprar-carrito:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.boton-comprar-carrito:focus {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+/* CARRITO */
+
+/* ADMIN */
+/* DASHBOARD */
+.caja-datos-dashboard {
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+.link-datos-dashboard {
+    color: black;
+    text-decoration: none;
+}
+
+.link-datos-dashboard:hover {
+    text-decoration: underline;
+}
+
+.link-datos-dashboard:focus {
+    text-decoration: underline;
+}
+
+.dato-dashboard {
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #46acdc;
+}
+
+.grafico-dashboard {
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+}
+
+.grafico-compras-completadas {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(var(--exitoso) 0% var(--compras-completadas), var(--fallido) var(--compras-completadas) 100%);
+}
+
+.grafico-usuarios-compradores {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(var(--exitoso) 0% var(--usuarios-compradores), var(--fallido) var(--usuarios-compradores) 100%);
+}
+
+.marcador-fallidas {
+    width: 20px;
+    height: 20px;
+    background-color: var(--fallido);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.marcador-exitosas {
+    width: 20px;
+    height: 20px;
+    background-color: var(--exitoso);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.grafico-ventas-semana {
+    display: flex;
+    align-items: end;
+    height: 200px;
+    width: 100%;
+    background-color: #00000000;
+    padding: 10px;
+    gap: 5px;
+    border-bottom: 2px solid #333;
+}
+
+.bar {
+    flex-grow: 1;
+    background-color: #4CAF50;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-size: 0.8em;
+    padding-top: 5px;
+}
+
+.bar span {
+    position: absolute;
+    bottom: -30px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.grafico-dinero-recaudado {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.cliente-de-oro {
+    font-weight: bold;
+    color: rgb(177, 151, 2);
+    text-decoration: none;
+}
+.cliente-de-oro:hover {
+    text-decoration: underline;
+}
+.cliente-de-oro:focus {
+    text-decoration: underline;
+}
+
+/* DASHBOARD */
+
+/* ABM */
+.elemento-lista-abm {
+    list-style: none;
+}
+
+.header-tabla th {
+    background-color: #98c060;
+    color: white;
+}
+
+.tabla-hover:hover td {
+    background-color: #46acdc22;
+}
+
+.boton-agregar {
+    background-color: #46acdc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.boton-agregar:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+.boton-agregar:focus {
+    transition: ease-in-out 0.2s;
+    background-color: #98c060;
+}
+
+/* ABM */
+/* ADMIN */
+
+@media (max-width: 480px) {
+
+    .logo {
+        max-height: 48px;
+        width: auto;
+    }
+
+    .caja-nav {
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: #98c060 5px solid;
+    }
+
+    .boton-ver-mas {
+        background-color: #98c060;
+        border: none;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        box-shadow: 2px 2px 5px rgba(53, 53, 53, 0.438);
+        margin-top: 1em;
+    }
+
+    .boton-comprar-detalle {
+        width: 100%;
+        background-color: #46acdc;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 1.25em;
+        box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    }
+
+    .stock-detalle {
+        font-size: 1em;
+        color: white;
+        background-color: #98c060;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
+    }
+
+    .total-carrito {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+}
