@@ -28,25 +28,36 @@ class CartItemController extends Controller
                 'unit_price' => (float) $item->product->price,
             ];
         }
+        // dd($data);
         $client = new PreferenceClient();
-        $purchaseOrder = $client->create([
-            'items' => $data,
-            'back_urls' => [
-                // Rutas reales (En el controlador se definen las distintas respuestas en base al estado de la compra)
-                'success' => 'localhost:8000/purchases/callback',
-                'failure' => 'localhost:8000/purchases/callback',
-                'pending' => 'localhost:8000/purchases/callback',
+        // dd($client);
+        try {
+            $purchaseOrder = $client->create([
+                'items' => $data,
+                'back_urls' => [
+                    // Rutas reales (En el controlador se definen las distintas respuestas en base al estado de la compra)
+                    // 'success' => 'localhost:8000/purchases/callback',
+                    // 'failure' => 'localhost:8000/purchases/callback',
+                    // 'pending' => 'localhost:8000/purchases/callback',
 
-                // Rutas de prueba
-                // 'success' => 'www.google.com/search?q=success',
-                // 'failure' => 'www.google.com/search?q=failure',
-                // 'pending' => 'www.google.com/search?q=pending',
-            ],
-            'auto_return' => 'approved',
-            'statement_descriptor' => 'El Bosque de los Sentidos',
-            'external_reference' => Auth::id() . '-' . time(),
-        ]);
-        return view('public-area.cart', compact('cartItems', 'purchaseOrder'));
+                    // Rutas de prueba
+                    'success' => 'www.google.com/search?q=success',
+                    'failure' => 'www.google.com/search?q=failure',
+                    'pending' => 'www.google.com/search?q=pending',
+                ],
+                'auto_return' => 'approved',
+                'statement_descriptor' => 'El Bosque de los Sentidos',
+                'external_reference' => Auth::id() . '-' . time(),
+            ]);
+            // dd($purchaseOrder);
+            return view('public-area.cart', compact('cartItems', 'purchaseOrder'));
+        } catch (\MercadoPago\Exceptions\MPApiException $e) {
+            \Log::error('Mercado Pago preference error', [
+                'message' => $e->getMessage(),
+                'body' => $e->getApiResponse()?->getContent(),
+                'status' => $e->getApiResponse()?->getStatusCode(),
+            ]);
+        }
     }
 
     /**
